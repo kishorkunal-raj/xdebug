@@ -12,7 +12,7 @@ trigger:
       - UPGRADING.INTERNALS
 
 jobs:
-  - template: azure/macos/job.yml
+  - template: .azure/macos/job.yml
     parameters:
       configurationName: MACOS_DEBUG_NTS
       configurationParameters: '--enable-debug --disable-maintainer-zts'
