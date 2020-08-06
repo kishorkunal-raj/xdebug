@@ -15,7 +15,6 @@ xdebug.remote_host=unix:///tmp/xdbg.sock
 xdebug.remote_port=0
 --FILE--
 <?php
-if (sys_get_temp_dir() !== '/tmp') die('Unexpected temp dir: '.sys_get_temp_dir());
 echo strlen("foo"), "\n";
 echo file_get_contents(sys_get_temp_dir() . '/' . getenv('UNIQ_RUN_ID') . 'remote-log4.txt' );
 unlink (sys_get_temp_dir() . '/' . getenv('UNIQ_RUN_ID') . 'remote-log4.txt' );
