@@ -1,0 +1,18 @@
+trigger:
+  batch: true
+  branches:
+    include:
+      - PHP-7.4
+      - master
+  paths:
+    exclude:
+      - docs/*
+      - NEWS
+      - UPGRADING
+      - UPGRADING.INTERNALS
+
+jobs:
+  - template: azure/macos/job.yml
+    parameters:
+      configurationName: MACOS_DEBUG_NTS
+      configurationParameters: '--enable-debug --disable-maintainer-zts'
