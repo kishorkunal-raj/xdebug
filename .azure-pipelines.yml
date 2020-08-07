@@ -14,11 +14,11 @@ trigger:
 jobs:
   - template: .azure/macos/job.yml
     parameters:
-      configurationName: 'MacOS / PHP 7.4'
+      configurationName: 'MacOS_PHP_74'
       phpVersion: '7.4.9'
       configurationParameters: '--enable-debug --disable-maintainer-zts'
   - template: .azure/macos/job.yml
     parameters:
-      configurationName: 'MacOS / PHP 7.3'
+      configurationName: 'MacOS_PHP_73'
       phpVersion: '7.3.21'
       configurationParameters: '--enable-debug --disable-maintainer-zts'
