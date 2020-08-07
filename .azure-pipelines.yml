@@ -2,23 +2,17 @@ trigger:
   batch: true
   branches:
     include:
-      - PHP-7.4
+      - xdebug_2_9
       - master
-  paths:
-    exclude:
-      - docs/*
-      - NEWS
-      - UPGRADING
-      - UPGRADING.INTERNALS
 
 jobs:
   - template: .azure/macos/job.yml
     parameters:
-      configurationName: 'MacOS_PHP_74'
+      configurationName: 'OSX_PHP_74'
       phpVersion: '7.4.9'
       configurationParameters: '--enable-debug --disable-maintainer-zts'
   - template: .azure/macos/job.yml
     parameters:
-      configurationName: 'MacOS_PHP_73'
+      configurationName: 'OSX_PHP_73'
       phpVersion: '7.3.21'
       configurationParameters: '--enable-debug --disable-maintainer-zts'

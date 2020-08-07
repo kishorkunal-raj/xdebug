@@ -10,6 +10,7 @@ xdebug.mode=coverage
 xdebug.auto_profile=0
 --FILE--
 <?php
+phpinfo();
 $file = 'bug01530.inc';
 $pathname = stream_resolve_include_path($file);
 xdebug_start_code_coverage(XDEBUG_CC_UNUSED | XDEBUG_CC_DEAD_CODE);
