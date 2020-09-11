@@ -11,7 +11,9 @@ php:
 env:
   - USE_OPCACHE=0
   - USE_OPCACHE=1
-
+arch:
+  - ppc64le
+  - amd64
 before_script:
   - phpenv config-rm xdebug.ini || echo "xdebug not available"
   - sh -e ./.travis.scripts/compile.sh
